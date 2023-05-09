@@ -1,9 +1,9 @@
-function Tweet() {
+function Tweet(props) {
     return (
-        <h1>
-            This is my tweet  component
+        <p>
+            {props.name}
 
-        </h1>
+        </p>
     )
 }
 export default Tweet

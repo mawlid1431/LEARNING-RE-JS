@@ -4,13 +4,52 @@ import Test from "./componants/Test";
 import We from "./componants/We"
 import Job from "./componants/Job"
 import Cond from "./componants/Cond";
-
+import People from './componants/People'
 import User from "./componants/User";
+import { useState } from "react";
 
 
 function App() {
+
+  const [value, setValue] = useState('')
+
+
+  // let names = ['jama', 'khaalid', 'mustafe']
+
+  const people = [
+    { name: "ali", isOnline: true },
+    { name: "muse", isOnline: true },
+    { name: "zack", isOffline: false },
+    { name: "ali", isOffline: true }];
+
+
   return (
     <div>
+
+      {people.map((item) => (
+
+        <People item={item} />
+      ))}
+
+
+
+
+
+
+
+
+      <h2>The user has Entered  {value}</h2>
+
+
+
+
+
+
+
+
+
+
+      <input type="text" onChange={(e) => setValue(e.target.value)} />
       <p>This is my app component </p>
       <Tweet name="tweet page1" />
       <Tweet name="tweet page2" />
@@ -26,6 +65,7 @@ function App() {
 
 
 
+
       <We email="WE1@gmail.com" number="1299234" location="hero 12 awr" />
       <We email="WE@gmail.com" number="12234" location="hero 22awr" />
       <We email="WE2@gmail.com" number="1223554" location="hero 44awr" />
@@ -35,9 +75,19 @@ function App() {
 
 
       <User IsLogin="false" />
+      <User IsLogin="false" />
+      <User IsLogin="true" />
+      <User IsLogin="true" />
+      <User IsLogin="true" />
+      <User IsLogin="true" />
 
 
-
+      <User IsLogin="false" />
+      <User IsLogin="false" />
+      <User IsLogin="true" />
+      <User IsLogin="true" />
+      <User IsLogin="true" />
+      <User IsLogin="true" />
 
 
 

@@ -1,0 +1,19 @@
+.flex{
+  display:flex;
+  align-items: center;
+  justify-content: center
+}
+
+.flex button{
+  padding:4px 9px;
+  margin: 10px
+}
+
+h2{
+  text-align: center
+}
+
+p{
+  font-weight: bold;
+  font-size:23px
+}
